@@ -1,0 +1,41 @@
+<div class="page-header-topbar">
+    <div class="page-header-secondary-msg">
+      <ul class="social-icons">
+        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+      </ul>
+    </div>  
+    <div class="page-header-secondary-nav">
+      <a routerLink="Home" fragment="search">SEARCH</a>
+      <a routerLink="Home" fragment="popular">POPULAR</a>
+      <a routerLink="Home" fragment="testimony">TESTIMONY</a>
+      <a routerLink="Home" fragment="services">SERVICES</a>
+      <a routerLink="Home" fragment="contact">CONTACT</a>
+    </div>
+  </div>
+  <div class="page-header">
+      <!--HOME HEADER-->
+      <div class="page-header-logo">
+        <h2>Mostafa Academy</h2>
+      </div>
+      <div>
+        <div class="page-header-secondary">
+          
+        </div>      
+        <div class="page-header-primary">
+          <div class="page-header-primary-nav">
+              <a [routerLink]="'Home'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">HOME</a><!-- routerLink is an attribute directive and is used to not spin the reload icon in the web page to not download all file resources every time --> 
+              <a [routerLink]="'About'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">ABOUT</a><!--this routerLinkActive call the .active Css class to deploy on all links. -->
+              <a [routerLink]="'Contact'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">CONTACT</a><!--this routerLinkActiveOptions make the .active Css class deploy to only the link you entered in it -->
+              <a routerLink="Courses" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">COURSES</a>
+          </div>
+          <div class="page-header-login-logout">
+              <a routerLink="/Login" *ngIf="isLogged()">LOGIN</a>
+              <a routerLink="/Login" [queryParams]="{logout:true}">LOGOUT</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
